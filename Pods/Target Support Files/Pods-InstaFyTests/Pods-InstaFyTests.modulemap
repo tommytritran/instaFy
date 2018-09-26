@@ -1,0 +1,6 @@
+framework module Pods_InstaFyTests {
+  umbrella header "Pods-InstaFyTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

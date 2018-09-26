@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Parse
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,7 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        Parse.initialize(
+            with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
+                configuration.applicationId = "InstaFy"
+                configuration.clientKey = "youwillneverguessmymasterkey"
+                configuration.server = "https://nameless-anchorage-79941.herokuapp.com/parse"
+            }))
         return true
     }
 
@@ -43,4 +48,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+
 
