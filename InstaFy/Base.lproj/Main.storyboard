@@ -27,7 +27,7 @@
                                 <rect key="frame" x="71" y="358" width="273" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktw-xL-Izn">
                                 <rect key="frame" x="184" y="408" width="47" height="30"/>
@@ -81,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="132.88043478260872"/>
         </scene>
-        <!--Logout View Controller-->
+        <!--Authenticated View Controller-->
         <scene sceneID="8Af-B9-fCx">
             <objects>
-                <viewController id="qvJ-4s-wS6" customClass="LogoutViewController" customModule="InstaFy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthenticatedViewController" id="qvJ-4s-wS6" customClass="AuthenticatedViewController" customModule="InstaFy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GBH-aL-fPe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,7 +94,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="logout"/>
                                 <connections>
-                                    <action selector="logout:" destination="qvJ-4s-wS6" eventType="touchUpInside" id="Ow5-z7-r1v"/>
+                                    <action selector="logout:" destination="qvJ-4s-wS6" eventType="touchUpInside" id="NHd-En-m61"/>
                                 </connections>
                             </button>
                         </subviews>

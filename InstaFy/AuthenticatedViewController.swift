@@ -1,5 +1,5 @@
 //
-//  LogoutViewController.swift
+//  AuthenticatedViewController.swift
 //  InstaFy
 //
 //  Created by Tommy Tran on 27/09/2018.
@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class LogoutViewController: UIViewController {
+class AuthenticatedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +17,17 @@ class LogoutViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func logout(_ sender: Any) {
+        PFUser.logOutInBackground(block: { (error) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                print("Successful loggout")
+                // Load and show the login view controller
+                print("User logout successfully")
+                self.performSegue(withIdentifier: "logoutSegue", sender: nil)            }
+        })
+    }
     
     /*
     // MARK: - Navigation
@@ -28,19 +38,5 @@ class LogoutViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
 
-    @IBAction func logout(_ sender: Any) {
-        
-        PFUser.logOutInBackground(block: { (error) in
-            if let error = error {
-                print(error.localizedDescription)
-            } else {
-                print("Successful loggout")
-                // Load and show the login view controller
-                print("User logout successfully")
-                self.performSegue(withIdentifier: "logoutSegue", sender: nil)
-            }
-        })
-    }
 }

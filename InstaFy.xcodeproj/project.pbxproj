@@ -16,7 +16,7 @@
 		0A6AE9C4215BD7B40037417B /* InstaFyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6AE9C3215BD7B40037417B /* InstaFyTests.swift */; };
 		0A6AE9CF215BD7B40037417B /* InstaFyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6AE9CE215BD7B40037417B /* InstaFyUITests.swift */; };
 		0A6AE9DD215BE4C00037417B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6AE9DC215BE4C00037417B /* LoginViewController.swift */; };
-		0A6DB9F8215D7A00004F2C6E /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6DB9F7215D7A00004F2C6E /* LogoutViewController.swift */; };
+		0AD88840215D8F92009825F1 /* AuthenticatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD8883F215D8F92009825F1 /* AuthenticatedViewController.swift */; };
 		7A03EBCF70F81FA2DC73EC81 /* Pods_InstaFyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E9BD59CA37F94970D6A1E05 /* Pods_InstaFyUITests.framework */; };
 		8A65D6549F1CCF28E3BE6E77 /* Pods_InstaFyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77BE3BF56EF9F2EDE1EF2C05 /* Pods_InstaFyTests.framework */; };
 /* End PBXBuildFile section */
@@ -54,7 +54,7 @@
 		0A6AE9CE215BD7B40037417B /* InstaFyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaFyUITests.swift; sourceTree = "<group>"; };
 		0A6AE9D0215BD7B40037417B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A6AE9DC215BE4C00037417B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		0A6DB9F7215D7A00004F2C6E /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
+		0AD8883F215D8F92009825F1 /* AuthenticatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedViewController.swift; sourceTree = "<group>"; };
 		147CCE608E5D3E89D5B58DF8 /* Pods-InstaFyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaFyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstaFyUITests/Pods-InstaFyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2B5BBB64487E0408F5B32D51 /* Pods-InstaFy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaFy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaFy/Pods-InstaFy.debug.xcconfig"; sourceTree = "<group>"; };
 		539B50B80335F812F9989DB5 /* Pods-InstaFyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaFyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaFyUITests/Pods-InstaFyUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 				0A6AE9B7215BD7B40037417B /* LaunchScreen.storyboard */,
 				0A6AE9BA215BD7B40037417B /* Info.plist */,
 				0A6AE9DC215BE4C00037417B /* LoginViewController.swift */,
-				0A6DB9F7215D7A00004F2C6E /* LogoutViewController.swift */,
+				0AD8883F215D8F92009825F1 /* AuthenticatedViewController.swift */,
 			);
 			path = InstaFy;
 			sourceTree = "<group>";
@@ -401,7 +401,7 @@
 			files = (
 				0A6AE9DD215BE4C00037417B /* LoginViewController.swift in Sources */,
 				0A6AE9B1215BD7B00037417B /* ViewController.swift in Sources */,
-				0A6DB9F8215D7A00004F2C6E /* LogoutViewController.swift in Sources */,
+				0AD88840215D8F92009825F1 /* AuthenticatedViewController.swift in Sources */,
 				0A6AE9AF215BD7B00037417B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
