@@ -24,8 +24,8 @@
                                     <constraint firstAttribute="height" constant="160" id="VVF-WH-yYA"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="By Tommy Tran" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RnL-2E-qZL">
-                                <rect key="frame" x="138" y="325" width="98" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Tommy Tran" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RnL-2E-qZL">
+                                <rect key="frame" x="138.5" y="316.5" width="98" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                 <color key="textColor" red="0.55047765540000004" green="0.55047765540000004" blue="0.55047765540000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -33,9 +33,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Pl2-I4-3vS" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-100" id="AiH-Lj-ohP"/>
-                            <constraint firstItem="Pl2-I4-3vS" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="QDG-ej-daU"/>
-                            <constraint firstItem="RnL-2E-qZL" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="VZb-li-BtQ"/>
+                            <constraint firstItem="Pl2-I4-3vS" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="1G0-Dj-QpD"/>
+                            <constraint firstItem="RnL-2E-qZL" firstAttribute="bottom" secondItem="Pl2-I4-3vS" secondAttribute="bottom" constant="20" id="GAf-EO-YH0"/>
+                            <constraint firstItem="RnL-2E-qZL" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Isr-Rd-rc3"/>
+                            <constraint firstItem="Pl2-I4-3vS" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-100" id="SFQ-Jg-4yu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
