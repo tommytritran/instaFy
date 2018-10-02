@@ -7,6 +7,7 @@ use_frameworks!
 
   # Pods for InstaFy
     pod 'Parse'
+    pod 'ParseUI'
   target 'InstaFyTests' do
     inherit! :search_paths
     # Pods for testing

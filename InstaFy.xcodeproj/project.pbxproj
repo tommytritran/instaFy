@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		06F3996ABC221227B679EF07 /* Pods_InstaFy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A23EB21B9E7BB52FA15A9F42 /* Pods_InstaFy.framework */; };
+		0A2E25D92162B9F500258417 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E25D82162B9F500258417 /* ComposeViewController.swift */; };
 		0A6AE9AF215BD7B00037417B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6AE9AE215BD7B00037417B /* AppDelegate.swift */; };
 		0A6AE9B1215BD7B00037417B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6AE9B0215BD7B00037417B /* ViewController.swift */; };
 		0A6AE9B4215BD7B00037417B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A6AE9B2215BD7B00037417B /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 		0A6AE9C4215BD7B40037417B /* InstaFyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6AE9C3215BD7B40037417B /* InstaFyTests.swift */; };
 		0A6AE9CF215BD7B40037417B /* InstaFyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6AE9CE215BD7B40037417B /* InstaFyUITests.swift */; };
 		0A6AE9DD215BE4C00037417B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6AE9DC215BE4C00037417B /* LoginViewController.swift */; };
+		0A82C54A215F0101005E3001 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A82C549215F0100005E3001 /* Post.swift */; };
+		0A82C54C215F0362005E3001 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A82C54B215F0362005E3001 /* ImageCell.swift */; };
 		0AD88840215D8F92009825F1 /* AuthenticatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD8883F215D8F92009825F1 /* AuthenticatedViewController.swift */; };
 		7A03EBCF70F81FA2DC73EC81 /* Pods_InstaFyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E9BD59CA37F94970D6A1E05 /* Pods_InstaFyUITests.framework */; };
 		8A65D6549F1CCF28E3BE6E77 /* Pods_InstaFyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77BE3BF56EF9F2EDE1EF2C05 /* Pods_InstaFyTests.framework */; };
@@ -40,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		0266FDA4126AAADBA94EC62B /* Pods-InstaFy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaFy.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstaFy/Pods-InstaFy.release.xcconfig"; sourceTree = "<group>"; };
+		0A2E25D82162B9F500258417 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		0A6AE9AB215BD7B00037417B /* InstaFy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaFy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6AE9AE215BD7B00037417B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A6AE9B0215BD7B00037417B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +58,8 @@
 		0A6AE9CE215BD7B40037417B /* InstaFyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaFyUITests.swift; sourceTree = "<group>"; };
 		0A6AE9D0215BD7B40037417B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A6AE9DC215BE4C00037417B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0A82C549215F0100005E3001 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		0A82C54B215F0362005E3001 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		0AD8883F215D8F92009825F1 /* AuthenticatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedViewController.swift; sourceTree = "<group>"; };
 		147CCE608E5D3E89D5B58DF8 /* Pods-InstaFyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaFyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstaFyUITests/Pods-InstaFyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2B5BBB64487E0408F5B32D51 /* Pods-InstaFy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaFy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaFy/Pods-InstaFy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +132,9 @@
 				0A6AE9BA215BD7B40037417B /* Info.plist */,
 				0A6AE9DC215BE4C00037417B /* LoginViewController.swift */,
 				0AD8883F215D8F92009825F1 /* AuthenticatedViewController.swift */,
+				0A82C549215F0100005E3001 /* Post.swift */,
+				0A82C54B215F0362005E3001 /* ImageCell.swift */,
+				0A2E25D82162B9F500258417 /* ComposeViewController.swift */,
 			);
 			path = InstaFy;
 			sourceTree = "<group>";
@@ -313,6 +322,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-InstaFy/Pods-InstaFy-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+				"${BUILT_PRODUCTS_DIR}/ParseUI/ParseUI.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -320,6 +330,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ParseUI.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -403,6 +414,9 @@
 				0A6AE9B1215BD7B00037417B /* ViewController.swift in Sources */,
 				0AD88840215D8F92009825F1 /* AuthenticatedViewController.swift in Sources */,
 				0A6AE9AF215BD7B00037417B /* AppDelegate.swift in Sources */,
+				0A82C54A215F0101005E3001 /* Post.swift in Sources */,
+				0A82C54C215F0362005E3001 /* ImageCell.swift in Sources */,
+				0A2E25D92162B9F500258417 /* ComposeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

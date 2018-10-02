@@ -9,11 +9,17 @@
 import UIKit
 import Parse
 
-class AuthenticatedViewController: UIViewController {
-
+class AuthenticatedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+   
+    
+    @IBOutlet weak var tableView: UITableView!
+    var posts: [Post] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.dataSource = self
+        tableView.delegate = self
+        getImages()
+        tableView.reloadData()
         // Do any additional setup after loading the view.
     }
     
@@ -29,14 +35,49 @@ class AuthenticatedViewController: UIViewController {
         })
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return posts.count
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "imageCell", for: indexPath) as! ImageCell
+        let post = posts[indexPath.row]
+        
+        if let imageFile : PFFile = post.media {
+            imageFile.getDataInBackground(block: {(data, error) in
+                if error != nil {
+                    print(error!.localizedDescription)
+                } else{
+                    DispatchQueue.main.async {
+                        let image = UIImage(data: data!)
+                        cell.photoView.image = image
+                    }
+                }
+            })
+        }
+        return cell
+    }
+    
+    func getImages(){
+        let query = Post.query()
+        query?.order(byAscending: "createdAt")
+        query?.includeKey("Author")
+        query?.limit = 20
+        
+        // fetch data asynchronously
+        query?.findObjectsInBackground { (Post, error: Error?) -> Void in
+            if let posts = Post {
+                self.posts = posts as! [Post]
+                self.tableView.reloadData()
+            } else {
+                print("fetch failed")
+            }
+        }
+    }
+    
+    
+    @IBAction func reloadPage(_ sender: Any) {
+        self.tableView.reloadData()
+    }
+    
 }
