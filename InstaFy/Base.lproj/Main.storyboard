@@ -194,6 +194,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMc-sZ-jKc">
+                                <rect key="frame" x="133" y="391" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="xWs-HT-Pq9" kind="presentation" id="6sN-5J-wki"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
@@ -211,7 +219,6 @@
                         <barButtonItem key="rightBarButtonItem" title="Share" id="7S7-gT-1Hq">
                             <connections>
                                 <action selector="shareImage:" destination="1gi-1G-gwt" id="zrb-yi-Ee2"/>
-                                <segue destination="xWs-HT-Pq9" kind="show" identifier="imageShared" id="5lt-ve-AbM"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -271,6 +278,6 @@
         <image name="launching_screen" width="964" height="940"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5lt-ve-AbM"/>
+        <segue reference="ZP8-O9-fwt"/>
     </inferredMetricsTieBreakers>
 </document>

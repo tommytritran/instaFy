@@ -50,7 +50,13 @@ class AuthenticatedViewController: UIViewController, UITableViewDelegate, UITabl
                 } else{
                     DispatchQueue.main.async {
                         let image = UIImage(data: data!)
+                        let username = post["author"] as? String
+                        let caption = post["caption"] as? String
                         cell.photoView.image = image
+                        print(caption)
+                        if caption != nil {
+                            cell.usernameLabel.text = caption
+                        }
                     }
                 }
             })

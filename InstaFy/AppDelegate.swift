@@ -19,8 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
                 configuration.applicationId = "InstaFy"
                 configuration.clientKey = "youwillneverguessmymasterkey"
-                configuration.server = "https://nameless-anchorage-79941.herokuapp.com/parse"
-            }))
+                configuration.server = "https://nameless-anchorage-79941.herokuapp.com/parse"            }))
         if PFUser.current() != nil {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             // view controller currently being set in Storyboard as default will be overridden

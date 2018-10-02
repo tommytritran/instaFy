@@ -67,7 +67,6 @@ class ComposeViewController: UIViewController, UIImagePickerControllerDelegate, 
         }
        // let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
         selectedImageIV.image = selectedImage
-    tmpImg = selectedImageIV.image!
         // Do something with the images (based on your use case)
         
         // Dismiss UIImagePickerController to go back to your original view controller
@@ -75,12 +74,15 @@ class ComposeViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
  
     @IBAction func shareImage(_ sender: Any) {
+        print("Hello")
         if selectedImageIV != nil && captionLabel.text != nil{
-            Post.postUserImage(image: tmpImg, withCaption: captionLabel.text) { (bool, error) in
+            Post.postUserImage(image: selectedImageIV.image, withCaption: captionLabel.text) { (bool, error) in
                 if let error = error{
                     print(error.localizedDescription)
                 } else {
                     print("sent")
+                    let nextView = AuthenticatedViewController()
+                  //  self.present(nextView, animated: true, completion: nil)
                 }
                 
             }
