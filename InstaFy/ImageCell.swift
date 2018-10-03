@@ -13,7 +13,7 @@ class ImageCell: UITableViewCell {
     
     @IBOutlet weak var photoView: PFImageView!
     
-    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var captionLabel: UILabel!
     var instagramPost: PFObject! {
         didSet {
             self.photoView.file = instagramPost["image"] as? PFFile

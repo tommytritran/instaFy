@@ -38,6 +38,10 @@ class ComposeViewController: UIViewController, UIImagePickerControllerDelegate, 
         }
         alertController.addAction(photolibraryOption)
         
+        let cancelOption = UIAlertAction(title: "Cancel", style: .default){
+            (action) in alertController.dismiss(animated: true, completion: nil)
+        }
+        alertController.addAction( cancelOption)
         self.present(alertController, animated: true, completion: nil)
         
     }
@@ -80,9 +84,8 @@ class ComposeViewController: UIViewController, UIImagePickerControllerDelegate, 
                 if let error = error{
                     print(error.localizedDescription)
                 } else {
-                    print("sent")
-                    let nextView = AuthenticatedViewController()
-                  //  self.present(nextView, animated: true, completion: nil)
+                    print("Sent")
+                    self.performSegue(withIdentifier: "goBackSegue", sender: nil)
                 }
                 
             }

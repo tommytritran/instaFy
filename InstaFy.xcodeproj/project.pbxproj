@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		06F3996ABC221227B679EF07 /* Pods_InstaFy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A23EB21B9E7BB52FA15A9F42 /* Pods_InstaFy.framework */; };
 		0A2E25D92162B9F500258417 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E25D82162B9F500258417 /* ComposeViewController.swift */; };
+		0A2E25DB2164504C00258417 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E25DA2164504C00258417 /* DetailViewController.swift */; };
 		0A6AE9AF215BD7B00037417B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6AE9AE215BD7B00037417B /* AppDelegate.swift */; };
 		0A6AE9B1215BD7B00037417B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6AE9B0215BD7B00037417B /* ViewController.swift */; };
 		0A6AE9B4215BD7B00037417B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A6AE9B2215BD7B00037417B /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		0266FDA4126AAADBA94EC62B /* Pods-InstaFy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaFy.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstaFy/Pods-InstaFy.release.xcconfig"; sourceTree = "<group>"; };
 		0A2E25D82162B9F500258417 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		0A2E25DA2164504C00258417 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0A6AE9AB215BD7B00037417B /* InstaFy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaFy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6AE9AE215BD7B00037417B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A6AE9B0215BD7B00037417B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				0A82C549215F0100005E3001 /* Post.swift */,
 				0A82C54B215F0362005E3001 /* ImageCell.swift */,
 				0A2E25D82162B9F500258417 /* ComposeViewController.swift */,
+				0A2E25DA2164504C00258417 /* DetailViewController.swift */,
 			);
 			path = InstaFy;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				0A82C54A215F0101005E3001 /* Post.swift in Sources */,
 				0A82C54C215F0362005E3001 /* ImageCell.swift in Sources */,
 				0A2E25D92162B9F500258417 /* ComposeViewController.swift in Sources */,
+				0A2E25DB2164504C00258417 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

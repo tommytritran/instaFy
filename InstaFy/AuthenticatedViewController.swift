@@ -35,6 +35,11 @@ class AuthenticatedViewController: UIViewController, UITableViewDelegate, UITabl
         })
     }
     
+    @IBAction func goToCompose(_ sender: Any) {
+        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "ComposeViewController") as! ComposeViewController
+        
+        self.navigationController!.pushViewController(secondViewController, animated: true)
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
     }
@@ -50,12 +55,10 @@ class AuthenticatedViewController: UIViewController, UITableViewDelegate, UITabl
                 } else{
                     DispatchQueue.main.async {
                         let image = UIImage(data: data!)
-                        let username = post["author"] as? String
                         let caption = post["caption"] as? String
                         cell.photoView.image = image
-                        print(caption)
                         if caption != nil {
-                            cell.usernameLabel.text = caption
+                            cell.captionLabel.text = caption
                         }
                     }
                 }
@@ -63,11 +66,25 @@ class AuthenticatedViewController: UIViewController, UITableViewDelegate, UITabl
         }
         return cell
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender:Any?) {
+        if(sender != nil) {
+            
+            let cell = sender as! UITableViewCell
+            if let indexPath = tableView.indexPath(for: cell) {
+                let post = posts[indexPath.row]
+                let detailViewController = segue.destination as! DetailViewController
+                detailViewController.post = post
+                
+                let postCell = sender as! ImageCell
+                detailViewController.image = postCell.photoView.image!
+            }
+        }
+    }
     func getImages(){
         let query = Post.query()
         query?.order(byAscending: "createdAt")
-        query?.includeKey("Author")
+        query?.includeKey("author")
+        query?.includeKey("timestamp")
         query?.limit = 20
         
         // fetch data asynchronously
@@ -80,8 +97,7 @@ class AuthenticatedViewController: UIViewController, UITableViewDelegate, UITabl
             }
         }
     }
-    
-    
+
     @IBAction func reloadPage(_ sender: Any) {
         self.tableView.reloadData()
     }
