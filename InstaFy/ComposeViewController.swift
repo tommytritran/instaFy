@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import Toucan
 
 
 class ComposeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -66,12 +67,12 @@ class ComposeViewController: UIViewController, UIImagePickerControllerDelegate, 
     
    @objc func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        // Get the image captured by the UIImagePickerController
-        guard let selectedImage = info[.originalImage] as? UIImage else {
-            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
-        }
-       // let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
-        selectedImageIV.image = selectedImage
+
+    let originalImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+    //let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
+    let resizedImage = Toucan.Resize.resizeImage(originalImage, size: CGSize(width: 414, height: 414))
+    selectedImageIV.image = resizedImage
+    selectedImageIV.contentMode = .scaleAspectFit
         // Do something with the images (based on your use case)
         
         // Dismiss UIImagePickerController to go back to your original view controller
