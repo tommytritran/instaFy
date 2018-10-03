@@ -11,11 +11,14 @@ import Parse
 
 class AuthenticatedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
-    
+    var refreshControl: UIRefreshControl!
     @IBOutlet weak var tableView: UITableView!
     var posts: [Post] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(onRefresh), for: .valueChanged)
+        tableView.insertSubview(refreshControl, at: 0)
         tableView.dataSource = self
         tableView.delegate = self
         getImages()
@@ -35,11 +38,13 @@ class AuthenticatedViewController: UIViewController, UITableViewDelegate, UITabl
         })
     }
     
-    @IBAction func goToCompose(_ sender: Any) {
-        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "ComposeViewController") as! ComposeViewController
-        
-        self.navigationController!.pushViewController(secondViewController, animated: true)
+ 
+    @IBAction func onAction(_ sender: Any) {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "ComposeViewController")
+        present(controller!, animated: true, completion: nil)
     }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
     }
@@ -66,9 +71,15 @@ class AuthenticatedViewController: UIViewController, UITableViewDelegate, UITabl
         }
         return cell
     }
+    
+    @objc func onRefresh() {
+        getImages()
+        tableView.reloadData()
+        refreshControl.endRefreshing()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender:Any?) {
         if(sender != nil) {
-            
             let cell = sender as! UITableViewCell
             if let indexPath = tableView.indexPath(for: cell) {
                 let post = posts[indexPath.row]
@@ -80,9 +91,12 @@ class AuthenticatedViewController: UIViewController, UITableViewDelegate, UITabl
             }
         }
     }
+    
+
+    
     func getImages(){
         let query = Post.query()
-        query?.order(byAscending: "createdAt")
+        query?.order(byDescending: "createdAt")
         query?.includeKey("author")
         query?.includeKey("timestamp")
         query?.limit = 20

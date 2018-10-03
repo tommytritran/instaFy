@@ -43,13 +43,15 @@ class Post: PFObject, PFSubclassing {
         post.caption = caption!
         post.likesCount = 0
         post.commentsCount = 0
-        let date = Date()
+        
+        let time = Date()
         let formatter = DateFormatter()
+        
         formatter.timeZone = TimeZone.current
         formatter.dateFormat = "yyyy-MM-dd HH:mm"
-        let dateResult = formatter.string(from: date)
-        print(dateResult)
-        post.timestamp = dateResult
+        
+        let dateString = formatter.string(from: time)
+        post.timestamp = dateString
         
         // Save object (following function will save the object in Parse asynchronously)
         post.saveInBackground(block: completion)
